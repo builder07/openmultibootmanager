@@ -178,12 +178,13 @@ class OMBManagerKernelModule:
 def OMBManager(session, **kwargs):
 	found = False
 
-	kernel_module = 'kernel-module-nandsim'
-	if "jffs2" in OMB_GETIMAGEFILESYSTEM:
-		if os.path.exists(OMB_UNJFFS2_BIN):
-			kernel_module = None
-		else:
-			kernel_module = 'kernel-module-block2mtd'
+# yuju off
+#	kernel_module = 'kernel-module-nandsim'
+#	if "jffs2" in OMB_GETIMAGEFILESYSTEM:
+#		if os.path.exists(OMB_UNJFFS2_BIN):
+#			kernel_module = None
+#		else:
+#			kernel_module = 'kernel-module-block2mtd'
 	if "tar.bz2" in OMB_GETIMAGEFILESYSTEM:
 		kernel_module = None
 	
